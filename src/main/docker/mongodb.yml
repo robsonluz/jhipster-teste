@@ -1,0 +1,9 @@
+version: '2'
+services:
+    app2-mongodb:
+        container_name: app2-mongodb
+        image: mongo:3.2.3
+        # volumes:
+        #     - ~/volumes/jhipster/app2/mongodb/:/data/db/
+        ports:
+            - 27017:27017

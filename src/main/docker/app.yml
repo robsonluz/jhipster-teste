@@ -1,0 +1,16 @@
+version: '2'
+services:
+    app2-app:
+        image: app2
+        external_links:
+            - app2-mongodb:mongodb
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod
+            - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017
+            - SPRING_DATA_MONGODB_DATABASE=app2
+        ports:
+            - 8080:8080
+    app2-mongodb:
+        extends:
+            file: mongodb.yml
+            service: app2-mongodb
