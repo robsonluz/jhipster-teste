@@ -19,7 +19,7 @@ spring:
             enabled: false
     data:
         mongodb:
-            uri: mongodb://localhost:27017
+            uri: mongodb://10.203.3.138:27017
             database: app2
     mail:
         host: localhost
